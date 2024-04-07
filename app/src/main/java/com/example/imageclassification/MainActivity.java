@@ -147,9 +147,29 @@ public class MainActivity extends AppCompatActivity {
                 recognizer.process(image)
                         .addOnSuccessListener(new OnSuccessListener<Text>() {
                             @Override
-                            public void onSuccess(Text visionText) {
-                                // Task completed successfully
-                                // ...
+                            public void onSuccess(Text result) {
+                                String resultText = result.getText();
+                                resultTv.setText(resultText);
+                                for (Text.TextBlock block : result.getTextBlocks()) {
+                                    String blockText = block.getText();
+                                    Point[] blockCornerPoints = block.getCornerPoints();
+                                    Rect blockFrame = block.getBoundingBox();
+                                    for (Text.Line line : block.getLines()) {
+                                        String lineText = line.getText();
+                                        Point[] lineCornerPoints = line.getCornerPoints();
+                                        Rect lineFrame = line.getBoundingBox();
+                                        for (Text.Element element : line.getElements()) {
+                                            String elementText = element.getText();
+                                            Point[] elementCornerPoints = element.getCornerPoints();
+                                            Rect elementFrame = element.getBoundingBox();
+                                            for (Text.Symbol symbol : element.getSymbols()) {
+                                                String symbolText = symbol.getText();
+                                                Point[] symbolCornerPoints = symbol.getCornerPoints();
+                                                Rect symbolFrame = symbol.getBoundingBox();
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         })
                         .addOnFailureListener(
