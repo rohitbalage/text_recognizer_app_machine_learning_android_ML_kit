@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "344985133390",
+    "project_id": "nativecourseimagelabeling",
+    "storage_bucket": "nativecourseimagelabeling.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344985133390:android:3955c269d1f18db4fc7e1f",
+        "android_client_info": {
+          "package_name": "com.example.imageclassification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344985133390-lo192vuiv3ru7m52f9ltjt9nq6mrrq2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtih5k3EGiNRf3xpEC0uT-uCgDrbtRv1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344985133390-lo192vuiv3ru7m52f9ltjt9nq6mrrq2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
